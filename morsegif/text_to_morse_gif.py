@@ -49,13 +49,25 @@ class MorseGif(object):
     Sometimes you want to make a gif that's blinking out a message in morse
     '''
 
-    def __init__(self, opening_frames=5, duration=0.2):
+    def __init__(self, opening_frames=5, duration=0.2, char_frames = 2,
+                 dit_frames = 1, dah_frames = 3, space_frames = 2):
+        '''
+        Defaults for the gif
+
+        Args:
+            opening_frames (int): how many frames of "off" before the code (default: 5)
+            duration (float): time for each frame to be desplayed (default: 0.2)
+            char_frames (int): frames of 'off' between characters (default: 2)
+            dit_frames (int): frames of 'on' for dit (.) (default: 1)
+            dah_frames (int): frames of 'on' for dah (-) (default: 3)
+            space_frames (int): frames of 'off' for spaces between words (default: 2)
+        '''
         self.opening_frames = opening_frames
         self.duration = duration
-        self.char_frames = 2
-        self.dit_frames = 1
-        self.dah_frames = 3
-        self.space_frames = 2
+        self.char_frames = char_frames
+        self.dit_frames = dit_frames
+        self.dah_frames = dah_frames
+        self.space_frames = space_frames
 
     def make_gif(self, text, offimg, onimg, outgif,):
         '''
