@@ -2,3 +2,4 @@
 test.gif
 *.egg-info/
 *.pyc
+local_data/
