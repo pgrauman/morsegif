@@ -2,7 +2,6 @@
 import fire
 import imageio
 
-
 letter2morse = {"A": ".-",
                 "B": "-...",
                 "C": "-.-.",
